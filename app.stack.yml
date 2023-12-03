@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  micronaut-udemy-kafka:
+    image: micronaut-udemy-kafka:latest
+    networks:
+      hostnet: {}
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: localhost:9092
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+network:
+  hostnet:
+    external: true
+    name: host

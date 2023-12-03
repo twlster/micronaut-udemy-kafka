@@ -1,5 +1,6 @@
 package edu.udemy.micronautkafka.producer.dto;
 
+import io.micronaut.core.annotation.Introspected;
 import io.micronaut.serde.annotation.Serdeable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Serdeable
+@Introspected
 public class PriceUpdate {
 
     private String symbol;
